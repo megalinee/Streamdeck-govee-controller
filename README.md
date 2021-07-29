@@ -6,6 +6,7 @@ Open the Govee Home mobile app
 Go to the "My Profile" tab, press "About us", press "Apply for API key"
 Fill out your name and your reason (For the reason you can just write "I would like to control my LEDs with programming" and it should be fine) and submit
 You will receive an email with your API key to the email address you entered when registering a Govee account normally within minutes.
+Once you recieve the key go ahead and put it in the "API_KEY" const inside main.js
 
 # How to get the device's MAC address (and model)
 Finding the LED's MAC address is one of the hardest parts of setup. Luckily, I've made it easy for you to do using this package (and you also find out the model, too!). You just need to run the code below (of course replacing <govee api key> with your api key), and leaving the mac address and model fields empty.
@@ -19,7 +20,8 @@ const GoveeClient = new Govee({
 })
 
 GoveeClient.getDevices().then(data => console.log(data))
-Once you run this, you should see something like the response below in your console. The MAC address is in the "device" field and the model is in the "model" field.
+Once you run this, you should see something like the response below in your console. 
+The MAC address is in the "device" field and the model is in the "model" field, insert those in the according fields in the main.js file.
 
 {
   devices: [
