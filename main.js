@@ -3,8 +3,12 @@ const express = require('express')
 const app = express()
 const port = 2555
 
+// FOLLOW INSTRUCTIONS IN README AND PUT IN GOVEE API KEY HERE
+const API_KEY = ""
+
+// FOLLOW INSTRUCTIONS IN README AND PUT MAC ADDRESS AND MODEL ID HERE.
 var led = new Govee({
-	apiKey: "",
+	apiKey: API_KEY,
 	mac: "",
 	model: ""
 });
