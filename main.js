@@ -19,7 +19,7 @@ app.get('/lights/on', function (req, res) {
   })
   
 app.get('/lights/off', function (req, res) {
-	deskled.turnOff()
+	led.turnOff()
 	res.send("LIGHTS OFF")
 })
 
